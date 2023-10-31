@@ -32,6 +32,12 @@ def generate_password(min_lenght, numbers=True, special_characters=True):
             meets_criteria = has_number
         if special_characters:
             meets_criteria = meets_criteria and has_special
+            
+    return pwd
 
 
-generate_password(10)
+min_lenght = int(input("Enter the minimun lenght: "))
+has_number = input("Do you went to have numbers (y/n)? ").lower() == "y"
+has_special = input("Do you went to have special characters (y/n)? ").lower() == "y"
+pwd = generate_password(10)
+print(pwd)
